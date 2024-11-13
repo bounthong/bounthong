@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 # Database configuration
 db_config = {
-    'host': 'apis.com.la',       # Update with your database host
+    'host': '115.84.76.97',       # Update with your database host
     'user': 'admin',     # Update with your database username
     'password': 'Sql_admin@#2024', # Update with your database password
     'database': 'bt'
