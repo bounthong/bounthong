@@ -6,8 +6,8 @@ app = Flask(__name__)
 # Database configuration
 db_config = {
     'host': '115.84.76.97',       # Update with your database host
-    'user': 'admin',               # Update with your database username
-    'password': 'Root_MySQL#2024', # Update with your database password
+    'user': 'remote',               # Update with your database username
+    'password': 'Remote_MySQL#2024', # Update with your database password
     'database': 'bt'
 }
 
