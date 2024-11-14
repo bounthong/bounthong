@@ -6,14 +6,19 @@ app = Flask(__name__)
 # Database configuration
 db_config = {
     'host': '115.84.76.97',       # Update with your database host
-    'user': 'admin',     # Update with your database username
-    'password': 'Root_MySQL#2024', # 'Sql_admin@#2024',  Update with your database password
+    'user': 'admin',               # Update with your database username
+    'password': 'Root_MySQL#2024', # Update with your database password
     'database': 'bt'
 }
 
 # Database connection
 def get_db_connection():
     return mysql.connector.connect(**db_config)
+
+# Root endpoint
+@app.route('/')
+def home():
+    return jsonify({"message": "Welcome to the API!"})
 
 # GET endpoint to retrieve users
 @app.route('/users', methods=['GET'])
