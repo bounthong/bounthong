@@ -20,6 +20,14 @@ def get_db_connection():
 def home():
     return jsonify({"message": "Welcome to the API!"})
 
+@app.route('/favicon.ico')
+def favicon():
+    return '', 204  # No Content, to avoid 404 errors for favicon
+
+@app.route('/favicon.png')
+def favicon_png():
+    return '', 204  # No Content
+
 # GET endpoint to retrieve users or a specific user by id
 @app.route('/users', methods=['GET'])
 def get_users():
@@ -47,10 +55,6 @@ def get_users():
         cursor.close()
         connection.close()
         return jsonify(users)  # Return all users
-
-@app.route('/favicon.ico')
-def favicon():
-    return '', 204  # No Content, to avoid 404 errors for favicon
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
