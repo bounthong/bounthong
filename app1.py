@@ -48,5 +48,9 @@ def get_users():
         connection.close()
         return jsonify(users)  # Return all users
 
+@app.route('/favicon.ico')
+def favicon():
+    return '', 204  # No Content, to avoid 404 errors for favicon
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
